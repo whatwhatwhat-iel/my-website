@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Krizzelle's Journal</title>
+    <style>
+        body {
+            font-family: 'Georgia', serif; 
+            margin: 0;
+            padding: 0;
+            background: #f4f4f9;
+            color: #333;
+            overflow: hidden;
+        }
+
+        h1, p {
+            text-align: center;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        .intro {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background: linear-gradient(to right, #ff7eb3, #ff758c);
+            color: white;
+            padding: 40px 20px;
+            position: relative;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+            background-image: url('https://assets.onecompiler.app/432w9yf5v/432w9y5us/a1f7e12b-f8a3-4995-b996-07daa3d79f60.jpeg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .intro::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.4);
+            z-index: -1;
+        }
+
+        .intro h1 {
+            font-size: 3rem;
+            color: white;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .intro p {
+            font-size: 1.5rem;
+            font-weight: 400;
+            color: #fff;
+            margin-top: 10px;
+            animation: fadeIn 2.5s ease-in-out;
+        }
+
+        .password-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .password-input {
+            padding: 10px;
+            font-size: 1.2rem;
+            border: 2px solid #ff758c;
+            border-radius: 30px;
+            width: 200px;
+            text-align: center;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 10px;
+            background: #ffffff;
+            color: #ff758c;
+            text-decoration: none;
+            padding: 12px 25px;
+            border-radius: 30px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            border: 2px solid #ff758c;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background: #ffe6ec;
+            transform: scale(1.1);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+            text-decoration: none;
+        }
+
+        .lock-message {
+            margin-top: 20px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: red;
+            display: none;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .intro h1 {
+                font-size: 2.5rem;
+            }
+
+            .intro p {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="intro" id="intro">
+        <h1>Welcome to Krizzelle's Journal</h1>
+        <p>Do you want to take a peek into her life?</p>
+        
+        <div class="password-container">
+            <input type="password" id="password" class="password-input" placeholder="Enter Password">
+            <button class="btn" onclick="checkPassword()">Continue</button>
+            <p id="lockMessage" class="lock-message">LOCKED: Its wrong to sneak on other people's journal!</p>
+        </div>
+    </div>
+
+    <script>
+        function checkPassword() {
+            const password = document.getElementById('password').value;
+            const lockMessage = document.getElementById('lockMessage');
+            
+            if (password === 'krizzelle12') {
+                window.location.href = 'infos.html'; 
+            } else {
+                lockMessage.style.display = 'block';
+            }
+        }
+    </script>
+
+</body>
+</html>

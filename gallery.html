@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <style>
+        body {
+            font-family: 'Georgia', serif;
+            margin: 0;
+            padding: 0;
+            background: #f4f4f9;
+            color: #333;
+        }
+
+        .container {
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px rgba(0, 0, 0, 0.2);
+            color: #ffffff;
+        }
+
+        .gallery {
+            display: flex;
+            align-items: wrap;
+            min-height: 100vh;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 40px 20px;
+            background: linear-gradient(to right, #ff7eb3, #ff758c);
+            color: white;
+            background-image: url('https://assets.onecompiler.app/432w9yf5v/432w9y5us/a1f7e12b-f8a3-4995-b996-07daa3d79f60.jpeg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .gallery img {
+            width: 150px;
+            height: 150px;
+            border-radius: 10%;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+            border: 4px solid #ffe6ec;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.1);
+        }
+
+        .image {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 10px;
+        }
+    
+.btn {
+            display: inline-block;
+            margin-top: 5px;
+            background: #ffffff;
+            color: #ff758c;
+            text-decoration: none;
+            padding: 5px 5px;
+            height: 20px;
+            border-radius: 30px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            border: 2px solid #ff758c;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn:hover {
+            background: #ffe6ec;
+            transform: scale(1.1);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+            text-decoration: none;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="gallery" id="gallery">
+        <h1>Gallery</h1>
+        <Strong>This is where she keeps her memories</Strong>
+        <img src="https://assets.onecompiler.app/432w9yf5v/432w9y5us/1734173621365.jpg" alt="Image 1" />
+        <img src="https://assets.onecompiler.app/432w9yf5v/432w9y5us/Messenger_creation_16441997-E45F-40A5-929E-A701434E9F90.jpeg" alt="Image 2" />
+        <img src="https://assets.onecompiler.app/432w9yf5v/432w9y5us/Screenshot_2024-12-14-19-04-54-004_com.facebook.orca-edit.jpg" alt="Image 3" />
+        <img src="https://assets.onecompiler.app/432w9yf5v/432w9y5us/Screenshot_2024-12-14-19-05-39-517_com.facebook.orca-edit.jpg" alt="Image 4" />
+        <a href="index.html" class="btn">Go back</a>      
+    </div>
+     </script>
+</body>
+</html>
